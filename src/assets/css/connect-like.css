@@ -1,0 +1,87 @@
+.connect-like-sec {
+	padding: 70px 0px;
+}
+.connect-like-sec .card {
+	margin: 0px 6px;
+}
+.connect-like-sec .connect-heading-wrapper h4 {
+	font-size: 32px;
+	font-weight: 500;
+}
+.connect-like-sec .slick-dots li button:before {
+	font-size: 11px;
+	color: #bcbcbc;
+	opacity: 1;
+}
+.connect-like-sec .slick-dots li.slick-active button:before {
+	background: linear-gradient(
+		to bottom,
+		#1b7da6,
+		#0091ac,
+		#00a39c,
+		#00b279,
+		#66bb49
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.connect-like-sec .slick-prev:before,
+.connect-like-sec .slick-next:before {
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	background: #e6f6ff;
+	align-items: center;
+	justify-content: center;
+	border-radius: 30px;
+	border: 1px solid #009cec;
+}
+.connect-like-sec .slick-prev:before {
+	content: "\f104";
+	font-size: 25px;
+	font-family: "FontAwesome";
+	background: linear-gradient(
+		to bottom,
+		#1b7da6,
+		#0091ac,
+		#00a39c,
+		#00b279,
+		#66bb49
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.connect-like-sec .slick-next:before {
+	content: "\f105";
+	font-size: 25px;
+	font-family: "FontAwesome";
+	background: linear-gradient(
+		to bottom,
+		#1b7da6,
+		#0091ac,
+		#00a39c,
+		#00b279,
+		#66bb49
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.connect-like-sec .slick-prev {
+	left: -38px;
+}
+.connect-like-sec .sep-btns-wrapper button.btn-primary {
+	padding: 8px 47px 8px 47px !important;
+	border-radius: 30px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.connect-like-sec .sep-btns-wrapper button.btn-primary span {
+	margin-left: 10px;
+}
+.connect-like-sec .members-wrapper {
+	width: 95%;
+}

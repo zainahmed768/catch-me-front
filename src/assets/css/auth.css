@@ -1,0 +1,278 @@
+.login-sec {
+    background-image: url("/src/assets/img/member-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 93px;
+    overflow: hidden;
+    min-height: calc(100vh - 103px);
+}
+.login-sec .divider-wrapper {
+	border-bottom: 1px solid #fff;
+	margin-top: 33px;
+}
+.log-heading-wrapper h5 {
+	font-size: 33px;
+	font-weight: 500;
+}
+
+.login-sec .divider-wrapper .divided {
+	height: 5px;
+	background: white;
+	width: 30%;
+	margin-left: 98px;
+}
+.log-heading-wrapper {
+	padding-bottom: 40px;
+}
+.login-form-wrapper .form-control {
+	color: #666;
+	padding: 0.75em 37px;
+	height: auto;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-radius: 2px;
+	box-shadow: none;
+	box-sizing: border-box;
+	transition: all 0.2s linear;
+}
+.login-form-wrapper .form-group-email::before {
+	content: "";
+	position: absolute;
+	background: url("../img/envelop.png") no-repeat;
+	width: 17px;
+	height: 20px;
+	background-size: contain;
+	left: 17px;
+	top: 50%;
+	transform: translateY(-35%);
+}
+.login-form-wrapper .form-group-password::before {
+	content: "";
+	position: absolute;
+	background: url("../img/2-1.png") no-repeat;
+	width: 17px;
+	height: 20px;
+	background-size: contain;
+	left: 17px;
+	top: 50%;
+	transform: translateY(-52%);
+}
+.login-form-wrapper .form-group-pass::before {
+	content: "";
+	position: absolute;
+	background: url("../img/ock.png") no-repeat;
+	width: 17px;
+	height: 20px;
+	background-size: contain;
+	left: 17px;
+	top: 50%;
+	transform: translateY(-52%);
+}
+.login-sec .login-heading-wrapper h5 {
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 25px;
+	letter-spacing: 2px;
+}
+.login-sec .login-heading-wrapper h3 {
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 50px;
+}
+.login-sec .login-heading-wrapper h6 {
+	font-size: 14px;
+	font-weight: 200;
+	text-decoration: none;
+	line-height: 25px;
+}
+.login-sec .login-form-wrapper button {
+	background-image: linear-gradient(
+		to left bottom,
+		#4d8e35,
+		#579e3b,
+		#60ae42,
+		#6bbe48,
+		#75cf4f
+	) ;
+}
+.login-form-wrapper .radio-wrap {
+	background: #fff !important;
+	padding: 10px 15px 10px 39px !important;
+	border-radius: 5px;
+	margin: 0 0 15px 0 !important;
+	box-shadow: 0px 0px 4px 1px #2223;
+}
+.login-form-wrapper .form-switch input {
+	width: 3rem;
+	height: 1.5rem;
+}
+div#step-3 .radio-wrap {
+	background: transparent !important;
+	box-shadow: none;
+	padding-bottom: 0px !important;
+}
+div#step-3 .radio-wrap label {
+	color: #fff;
+}
+
+.login-form-wrapper button.resend-btn {
+	background-image: none !important;
+	padding: 0px;
+	border: 0px;
+}
+
+/* regiter modal starts here */
+div#welcome-modal {
+	max-width: 450px;
+}
+.welcome-heading-wrapper h3 {
+	font-size: 31px;
+}
+.welcome-heading-wrapper p {
+	color: #afafaf;
+	font-size: 24px;
+	font-weight: 400;
+}
+.welcome-list-wrapper {
+	padding: 20px;
+}
+
+.welcome-point-wrapper .welcome-content-wrapper h6 {
+	font-size: 21px;
+	font-weight: 400;
+}
+
+.welcome-point-wrapper .welcome-content-wrapper p {
+	color: #afafaf;
+	font-size: 16px;
+	font-weight: 400;
+}
+div#welcome-modal button.modal-btn {
+	background-image: linear-gradient(
+		to left bottom,
+		#4d8e35,
+		#579e3b,
+		#60ae42,
+		#6bbe48,
+		#75cf4f
+	) !important;
+}
+.modal {
+	background: #ffffffda;
+}
+.group-detail-sec .about-card-wrapper .modal-content {
+    border: 1px solid #429D75;
+}
+.login-form-wrapper select {
+	color: #666;
+	padding: 0.75em 37px;
+	height: auto;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-radius: 2px;
+	box-shadow: none;
+	box-sizing: border-box;
+	transition: all 0.2s linear;
+}
+.distance-wrapper {
+	background: #1baef9;
+	padding: 30px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+.step-icon-wrapper span.index {
+	background: #fff;
+	width: 40px;
+	height: 40px;
+	color: #1baef9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 5px #ffffff69;
+}
+.login-form-wrapper .form-check label {
+	color: #fff;
+}
+.login-sec .step-list-wrapper ul li {
+	padding-bottom: 32px;
+}
+.login-sec .step-list-wrapper ul li.active {
+	border-bottom: 5px solid #fff;
+}
+.upload-box .uploaded-image {
+	height: 184px;
+	object-fit: cover;
+}
+.upload-box .remove-btn {
+    position: absolute;
+    top: 6px;
+    right: 2px;
+}
+@media (max-width: 991px) {
+	.log-heading-wrapper h5 {
+		font-size: 24px;
+	}
+	
+	.login-sec .divider-wrapper {
+		margin-top: 17px;
+	}
+	
+	.login-sec .login-heading-wrapper h3 {
+		font-size: 32px;
+		line-height: 1.2;
+	}
+	.welcome-heading-wrapper h3 {
+		font-size: 23px;
+	}
+	
+	.welcome-heading-wrapper p {
+		font-size: 19px;
+	}
+	
+	.welcome-point-wrapper .welcome-content-wrapper h6 {
+		font-size: 17px;
+	}
+	
+	.welcome-point-wrapper .welcome-content-wrapper p {
+		font-size: 13px;
+	}
+}
+@media (max-width: 768px) {
+	.log-heading-wrapper h5 {
+		font-size: 21px;
+	}
+	
+	.login-sec .divider-wrapper {
+		margin-top: 15px;
+	}
+	
+	.login-sec .login-heading-wrapper h3 {
+		font-size: 29px;
+	}
+}
+@media (max-width: 576px) {
+	.welcome-list-wrapper {
+		padding: 10px 7px;
+	}
+	
+	.welcome-heading-wrapper p {
+		font-size: 16px;
+	}
+	
+	.welcome-list-wrapper .welcome-icon-wrapper svg {
+		width: 19px !important;
+	}
+	
+	.welcome-point-wrapper .welcome-content-wrapper h6 {
+		font-size: 14px;
+	}
+	
+	.welcome-point-wrapper .welcome-content-wrapper p {
+		font-size: 11px;
+	}
+}

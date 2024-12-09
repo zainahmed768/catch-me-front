@@ -1,0 +1,83 @@
+.contact-sec {
+	padding: 100px 0px;
+}
+.contact-form-wrapper input {
+	background-color: #f3f3f3;
+	border-width: 0px 0px 0px 0px;
+	padding: 0.75em;
+	border-radius: 2px;
+}
+
+.contact-form-wrapper label {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 25px;
+}
+
+.contact-form-wrapper textarea {
+	background-color: #f3f3f3;
+	border-width: 0px 0px 0px 0px;
+	padding: 0.75em;
+	border-radius: 2px;
+}
+
+.contact-form-wrapper select {
+	background-color: #f3f3f3;
+	border-width: 0px 0px 0px 0px;
+	padding: 0.75em;
+	border-radius: 2px;
+}
+.mapouter {
+	position: relative;
+	text-align: right;
+	width: 600px;
+	height: 400px;
+	max-width: 100%;
+}
+.gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	width: 600px;
+	height: 400px;
+	max-width: 100%;
+}
+.gmap_iframe {
+	width: 100% ;
+	height: 400px !important;
+}
+.contact-form-wrapper button.btn {
+	background-image: linear-gradient(
+		to left bottom,
+		#4d8e35,
+		#579e3b,
+		#60ae42,
+		#6bbe48,
+		#75cf4f
+	) !important;
+	transition: all 0.3s ease;
+	border-radius: 30px;
+	font-weight: 500;
+	padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+	.mapouter,.gmap_canvas {
+		width: 100%;
+	}
+}
+@media (max-width: 576px) {
+	.contact-form-wrapper input {
+		font-size: 11px;
+		padding: 9px 12px;
+	}
+	
+	.contact-form-wrapper select {
+		font-size: 11px;
+		padding: 9px 12px;
+	}
+	
+	.contact-form-wrapper textarea {
+		padding: 9px 12px;
+		font-size: 11px;
+	}
+}

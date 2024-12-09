@@ -1,0 +1,37 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+$primary: #FFF9F1;
+$dark: #1E1E1E;
+// $info: #0c71b9;
+$info: #006060;
+
+// Include any default variable overrides here (though functions won't be available)
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+// Required
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// Default variable overrides
+$body-color: #000;
+$font-family-sans-serif: "poppins";
+$h1-font-size: "36px";
+$h2-font-size: "32px";
+$h3-font-size: "26px";
+$h4-font-size: "30px";
+$h5-font-size: "20px";
+$h6-font-size: "15px";
+$headings-font-family: "poppins";
+$headings-color: #1E1E1E;
+$headings-font-weight: 500;
+$btn-font-weight: 400;
+$border-color: #0000005e;
+// $border-radius: 1rem;
+// Required
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/root";
+
+// Optional Bootstrap components here
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/type";
+// etc

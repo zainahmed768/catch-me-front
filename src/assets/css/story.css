@@ -1,0 +1,25 @@
+/* our story starts here */
+.our-story-sec {
+	padding: 100px 0px 0px;
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		transparent,
+		transparent,
+		transparent,
+		transparent,
+		transparent,
+		transparent,
+		transparent,
+		#009cec6b
+	);
+}
+.our-story-sec .our-story-content-wrapper {
+    padding-bottom: 90px;
+}
+/* our story ends here */
+/* story starts here */
+.story-sec {
+	padding: 100px 0px 0px 0px;
+}
+/* story ends here */

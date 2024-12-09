@@ -1,0 +1,31 @@
+/* meet starts here */
+.meet-sec {
+	padding: 100px 0px;
+}
+.meet-card-wrapper img {
+	height: 400px;
+	object-fit: cover;
+}
+/* meet ends here */
+@media (max-width: 1200px){
+	.meet-card-wrapper img {
+		height: 350px;
+	}
+}
+@media (max-width: 768px){
+	.meet-card-wrapper img {
+		height: 290px;
+	}
+}
+@media (max-width: 576px){
+	.meet-card-wrapper img {
+		height: unset;
+		min-height: 150px;
+		max-height: 420px;
+	}
+
+}
+
+.vision-bg {
+	background-color: #0C71B9;
+}

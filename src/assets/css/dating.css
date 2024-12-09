@@ -1,0 +1,28 @@
+.dating-sec {
+	padding: 100px 0px;
+}
+.dating-content-wrapper p {
+	font-weight: 500;
+	font-size: 14px;
+	color: #000;
+}
+.dating-content-wrapper ul li {
+	font-weight: 500;
+	font-size: 14px;
+	color: #000;
+}
+.dating-content-wrapper h5.text-info {
+	color: #009cec !important;
+	font-family: "Poppins";
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 22px;
+}
+.dating-img-wrapper h4.text-dark {
+	font-size: 23px !important;
+	margin-bottom: 30px;
+}
+.dating-content-wrapper h3 {
+	font-size: 30px;
+	margin-bottom: 30px;
+}

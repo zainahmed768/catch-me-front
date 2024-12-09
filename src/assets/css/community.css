@@ -1,0 +1,58 @@
+.community-sec .community-content-wrapper p {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.community-sec .community-content-wrapper h4 {
+	font-size: 25px;
+}
+
+.terms-sec {
+	padding: 70px 0px;
+	background-image: url("../img/world-icon.png");
+	background-repeat: no-repeat;
+	background-position: top 33% right 2%;
+	/* background-position-y:  ; */
+	background-size: 70px;
+	position: relative;
+}
+
+.terms-sec::before {
+	content: "";
+	position: absolute;
+	bottom: 70px;
+	left: 0px;
+	background-image: url("../img/world-icon.png");
+	background-repeat: no-repeat;
+	background-position: center right 2%;
+	width: 70px;
+	height: 70px;
+	background-size: 100%;
+}
+
+.terms-sec p {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.bill-of-rights {
+	padding: 60px 0px;
+}
+
+.bill-of-rights .rights-content-wrapper h3 {
+	color: #3a3a3a !important;
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.bill-of-rights .rights-content-wrapper h5 {
+	color: #3a3a3a !important;
+	font-weight: 700;
+	margin: 30px 0px;
+}
+
+.bill-of-rights .rights-content-wrapper p {
+	font-weight: 500;
+	font-size: 14px;
+	color: #000;
+}
