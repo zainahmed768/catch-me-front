@@ -25,6 +25,7 @@ import {
 import "../../assets/css/style.css";
 import { faqs } from "../../utils/data";
 import {
+  useAmazingFeaturesQuery,
   useFaqsQuery,
   useLandingPageContentQuery,
 } from "../../redux/services/SiteSettingServices";
@@ -32,10 +33,11 @@ import {
 const Home = () => {
   const { data } = useLandingPageContentQuery();
   const { data: faqs } = useFaqsQuery();
+  const { data: featuersList } = useAmazingFeaturesQuery();
   let homeContent = data?.response?.data;
   let homeFaqs = faqs?.response?.data;
-
-  console.log(faqs);
+  let featuresItem = featuersList?.response?.data;
+  console.log(featuersList);
   return (
     <>
       <Header />
@@ -47,16 +49,24 @@ const Home = () => {
             <Col lg={8}>
               <div className="banner-content-wrapper mt-5">
                 <div className="banner-heading-wrapper text-center">
-                  <h1 className="text-white">{homeContent?.section1_title}</h1>
-                  <p className="text-white">
+                  <h1 className="text-white wow animate__animated animate__fadeInLeft ">
+                    {homeContent?.section1_title}
+                  </h1>
+                  <p className="text-white wow animate__animated animate__fadeInLeft ">
                     {homeContent?.section1_sub_title}
                   </p>
                 </div>
                 <div className="banner-btn-wrappers text-center d-flex gap-2 justify-content-center">
-                  <a href={homeContent?.apple_link}>
+                  <a
+                    href={homeContent?.apple_link}
+                    className="wow animate__animated animate__fadeInLeft "
+                  >
                     <img src={apple_pay} className="img-fluid" alt="" />
                   </a>
-                  <a href={homeContent?.google_link}>
+                  <a
+                    href={homeContent?.google_link}
+                    className="wow animate__animated animate__fadeInRight "
+                  >
                     <img src={google_pay} className="img-fluid" alt="" />
                   </a>
                 </div>
@@ -75,28 +85,32 @@ const Home = () => {
       </section>
       {/* banner ends here */}
       {/* About starts here */}
-      <section className="about-sec">
+      <section className="about-sec" id="about">
         <Container>
           <Row>
             <Col lg={2}></Col>
             <Col lg={8}>
               <div className="about-first-row-wrapper">
                 <div className="text-center">
-                  <h2 className="text">{homeContent?.section2_title}</h2>
-                  <p>{homeContent?.section2_sub_title}</p>
+                  <h2 className="text wow animate__animated animate__fadeInDown">
+                    {homeContent?.section2_title}
+                  </h2>
+                  <p className="wow animate__animated animate__fadeInLeft">
+                    {homeContent?.section2_sub_title}
+                  </p>
                 </div>
               </div>
             </Col>
           </Row>
-          <Row className="mt-5 align-items-center">
+          <Row className="mt-5 align-items-center ">
             <Col lg={6}>
-              <div className="about-img-wrapper">
+              <div className="about-img-wrapper wow animate__animated animate__fadeInLeft">
                 <Figure.Image src={homeContent?.section2_image} />
               </div>
             </Col>
             <Col lg={6}>
               <div
-                className="about-content-wrapper"
+                className="about-content-wrapper wow animate__animated animate__fadeInRight"
                 dangerouslySetInnerHTML={{
                   __html: homeContent?.section2_content,
                 }}
@@ -122,7 +136,7 @@ const Home = () => {
           <Row className="mt-5 align-items-center">
             <Col lg={6}>
               <div
-                className="about-content-wrapper"
+                className="about-content-wrapper mt-lg-0 mt-4"
                 dangerouslySetInnerHTML={{
                   __html: homeContent?.section3_content,
                 }}
@@ -145,7 +159,7 @@ const Home = () => {
               </div>
             </Col>
             <Col lg={6}>
-              <div className="about-img-wrapper">
+              <div className="about-img-wrapper mt-lg-0 mt-5">
                 <Figure.Image src={homeContent?.section3_image} />
               </div>
             </Col>
@@ -187,7 +201,7 @@ const Home = () => {
       </section>
       {/* Trusted ends here */}
       {/* features starts here */}
-      <section className="feature-sec">
+      <section className="feature-sec" id="features">
         <Container>
           <Row>
             <Col lg={3}></Col>
@@ -219,7 +233,7 @@ const Home = () => {
               );
             })}
           </Row>
-          <Row className="mt-5 pt-5">
+          {/* <Row className="mt-5 pt-5">
             <Col lg={12}>
               <div className="feature-video-wrapper position-relative">
                 <div className="feature-video-img-wrapper">
@@ -240,31 +254,49 @@ const Home = () => {
                 </div>
               </div>
             </Col>
+          </Row> */}
+          <Row className="mt-5 pt-5">
+            <Col lg={12}>
+              <div className="feature-video-wrapper position-relative">
+                <div className="feature-video-img-wrapper">
+                  {/* <img src={feature4_img} className="img-fluid" /> */}
+                  <video src={featuresItem?.[0]?.image} width={"100%"} controls></video>
+                </div>
+                <div className="feature-content-wapper position-absolute bottom-0 w-100 d-flex justify-content-between pb-4 px-5">
+                  <div className="feature-des-wrapper">
+                    <h2 className="text-white">{featuresItem?.[0]?.title}</h2>
+                    <p className="text-white">{featuresItem?.[0]?.sub_title}</p>
+                  </div>
+                    {/* <div className="feature-play-btn-wrapper text-center">
+                      <img src={playbtn_img} className="img-fluid" alt="" />
+                      <p className="text-white text-center">PLAY VIDEO</p>
+                    </div> */}
+                </div>
+              </div>
+            </Col>
           </Row>
           <Row className="align-items-stretch">
             <Col lg="6">
               <div className="feature-brown-wrapper mt-5 ">
-                <div className="feature-brown-content-wrapper text-center px-5 pt-5">
-                  <h2 className="text-white">Lorem ipsum dolor sit</h2>
-                  <p className="text-white">
-                    Lorem ipsum dolor sit amet consectetur. Elementum
-                    suspendisse arcu sed aliquam ut nibh suspendisse posuere.
-                    Volutpat i
-                  </p>
+                <div className="feature-brown-content-wrapper text-center px-lg-5 px-3 pt-5">
+                  <h2 className="text-white">{featuresItem?.[1]?.title}</h2>
+                  <p className="text-white">{featuresItem?.[1]?.sub_title}</p>
                 </div>
                 <div className="feature-brown-img-wrapper">
-                  <img src={feature5_img} className="img-fluid" alt="" />
+                  <img
+                    src={featuresItem?.[1]?.image}
+                    className="img-fluid"
+                    alt=""
+                  />
                 </div>
               </div>
             </Col>
             <Col lg="6">
-              <div className="feature-blue-wrapper mt-5 bg-info d-flex  align-items-center px-5">
+              <div className="feature-blue-wrapper mt-5 bg-info d-flex  align-items-center px-lg-5">
                 <div className="feature-brown-content-wrapper text-center pt-5">
-                  <h2 className="text-white">Lorem ipsum dolor sit</h2>
+                  <h2 className="text-white">{featuresItem?.[2]?.title}</h2>
                   <p className="text-white">
-                    Lorem ipsum dolor sit amet consectetur. Elementum
-                    suspendisse arcu sed aliquam ut nibh suspendisse posuere.
-                    Volutpat i
+                  {featuresItem?.[2]?.sub_title}
                   </p>
                 </div>
               </div>

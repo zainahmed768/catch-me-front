@@ -81,10 +81,28 @@ header#header {
   height: 607px;
 }
 .feature-blue-wrapper {
-  border-radius: 28px;  
+  border-radius: 28px;
   height: 607px;
 }
+@media (max-width: 800px) {
+  .feature-brown-wrapper {
+    height: 500px;
+  }
+}
 /* feature ends here */
+/* loading starts here */
+.loading-wrapper {
+  position: absolute;
+  width: 100%;
+  background-color: #006060;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* loading ends here */
 /* faq starts here */
 .faq-sec {
   padding: 80px 0px;
@@ -117,12 +135,15 @@ footer.footer .disclamer-wrapper {
   border-right: 2px solid #ffffff21;
   padding-right: 17px;
 }
-.footer-menu-wrapper {
-  border-bottom: 2px solid #ffffff21;
+/* .footer-menu-wrapper {
   padding-bottom: 20px;
-}
+} */
 .footer-info-wrapper {
   padding-top: 30px;
+}
+.footer-copyright-wrapper p {
+  color: #80afaf;
+  font-weight: 600 !important;
 }
 
 .footer-info-wrapper .phone-wrapper:not(:last-child) {
@@ -145,12 +166,12 @@ footer.footer .disclamer-wrapper {
 footer.footer .footer-link-copyright-wrapper {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  /* padding-top: 38px;  */
 }
 
-footer.footer .footer-link-copyright-wrapper .footer-end-links-wrapper {
+/* footer.footer .footer-link-copyright-wrapper .footer-end-links-wrapper {
   flex: 0 0 65%;
-}
+} */
 
 footer.footer .footer-link-copyright-wrapper .footer-copyright-wrapper p {
   color: #80afaf;
@@ -173,4 +194,173 @@ footer.footer
   a:last-child {
   padding: 0px 0px 0px 10px;
 }
+.contact-form-wrapper input.form-control {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  margin-top: 10px;
+  height: 43px;
+}
+.contact-form-wrapper textarea.form-control {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  margin-top: 10px;
+}
+@media (max-width: 1370px) {
+  .footer-menu-wrapper ul li:not(:last-child) {
+    padding-right: 8px;
+  }
+  .footer-menu-wrapper ul li a {
+    font-size: 14px;
+  }
+  footer.footer .footer-link-copyright-wrapper .footer-end-links-wrapper a {
+    font-size: 14px;
+  }
+}
+
 /* footer ends here */
+section.page-header {
+  background: #006060;
+  padding: 150px 0px;
+  text-align: center;
+}
+
+/* mobile header css starts here */
+.mobile-header {
+  width: 276px;
+  min-height: 100vh;
+  position: fixed;
+  background: #006060;
+  top: 0;
+  z-index: 99999999999;
+  right: 0;
+  padding-top: 30px;
+  transition: 0.7s;
+  transform: translateX(100%);
+}
+
+.mobile-header.show {
+  transform: translateX(0%);
+}
+
+.mobile-header ul.mobile-nav {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-header .cancel {
+  background: #fff;
+  width: 35px;
+  text-align: center;
+  height: 35px;
+  line-height: 39px;
+  margin: 0px 20px 20px auto;
+}
+
+.mobile-header ul.mobile-nav li.nav-item {
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid #fff;
+}
+
+.mobile-header ul.mobile-nav li.nav-item a {
+  color: #fff;
+  font-size: 14px;
+  padding: 0 20px;
+  width: 100%;
+  display: block;
+}
+
+.mobile-header ul.mobile-nav li.nav-item a {
+  text-decoration: none;
+}
+
+.mobile-header ul.mobile-nav li.nav-item button {
+  color: #fff;
+}
+
+ul#mob {
+  padding: 0px !important;
+  display: flex;
+  justify-content: end;
+}
+
+ul#mob li.mobile.nav-items {
+  background: #fff;
+  padding: 10px 24px;
+  font-size: 25px;
+}
+
+ul#mob {
+  display: none;
+}
+
+.header-menu-wrapper a.btn:hover {
+  background: #fff;
+  color: #03254c !important;
+}
+
+.small-font,
+.small-font * {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  color: #000000;
+}
+
+.accordion {
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+  padding: 0px 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 10px 0px 10px 14px;
+  background-color: #000;
+  display: none;
+  /* border-top: 1px solid #dddddd4a; */
+  overflow: hidden;
+}
+
+.mobile-header {
+  display: none;
+}
+
+/* responsive starts here */
+@media (max-width: 991px) {
+  header#header .header-menu-wrapper {
+    display: none;
+  }
+
+  ul#mob {
+    display: flex;
+    justify-content: end;
+  }
+
+  .mobile-header {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  footer.footer .footer-link-copyright-wrapper {
+    flex-direction: column;
+  }
+}
+
+.nav-link.active {
+  color: #fff;
+}
