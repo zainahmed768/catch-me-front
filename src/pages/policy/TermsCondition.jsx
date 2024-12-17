@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Col, Container, Row } from "react-bootstrap";
 import { usePagesQuery } from "../../redux/services/SiteSettingServices";
 
 const TermsCondition = () => {
-  const { data: pages } = usePagesQuery("privacy-policy");
-  console.log(pages);
+  const { data: pages } = usePagesQuery();
+
+  let page = pages?.response?.data?.data;
+  let termsContent = page?.filter(
+    (page) => page?.slug == "terms-and-conditions-of-use"
+  );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />
@@ -26,49 +34,15 @@ const TermsCondition = () => {
           <Row>
             <Col lg={12}>
               <div className="term-content-wrapper">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore! Lorem ipsum, dolor sit amet consectetur adipisicing
-                  elit. Vel et culpa sit voluptates quasi eligendi quis ullam
-                  officia dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
-
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
+                {termsContent?.map((content) => {
+                  return (
+                    <>
+                      <p
+                        dangerouslySetInnerHTML={{ __html: content?.content }}
+                      ></p>
+                    </>
+                  );
+                })}
               </div>
             </Col>
           </Row>

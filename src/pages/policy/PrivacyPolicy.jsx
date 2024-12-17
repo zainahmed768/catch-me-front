@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Col, Container, Row } from "react-bootstrap";
 import { usePagesQuery } from "../../redux/services/SiteSettingServices";
 
 const PrivacyPolicy = () => {
-  const { data: pages } = usePagesQuery("privacy-policy");
-  console.log(pages);
+  const { data: pages } = usePagesQuery();
+
+  let page = pages?.response?.data?.data;
+  let privacyContent = page?.filter((page) => page?.slug == "privacy-policy");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />
@@ -26,49 +32,15 @@ const PrivacyPolicy = () => {
           <Row>
             <Col lg={12}>
               <div className="term-content-wrapper">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore! Lorem ipsum, dolor sit amet consectetur adipisicing
-                  elit. Vel et culpa sit voluptates quasi eligendi quis ullam
-                  officia dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
-
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                  et culpa sit voluptates quasi eligendi quis ullam officia
-                  dicta rem quae suscipit nemo minus libero accusantium,
-                  dignissimos deserunt! Expedita voluptatem, assumenda officiis,
-                  esse dolorem harum numquam corrupti corporis excepturi commodi
-                  molestias odio eaque aperiam atque laborum cum eius, veritatis
-                  inventore!
-                </p>
+                {privacyContent?.map((content) => {
+                  return (
+                    <>
+                      <p
+                        dangerouslySetInnerHTML={{ __html: content?.content }}
+                      ></p>
+                    </>
+                  );
+                })}
               </div>
             </Col>
           </Row>

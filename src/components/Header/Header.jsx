@@ -40,7 +40,7 @@ const Header = () => {
             <Col lg={6} className="text-center d-none d-lg-block">
               <div className="nav-links-wrapper">
                 <Nav className="me-auto justify-content-center">
-                  <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="#about">About Us</Nav.Link>
                   <Nav.Link href="#features">Features</Nav.Link>
                   <Nav.Link href="#link">Testimonials</Nav.Link>

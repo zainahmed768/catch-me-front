@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import {
@@ -38,6 +38,10 @@ const Home = () => {
   let homeFaqs = faqs?.response?.data;
   let featuresItem = featuersList?.response?.data;
   console.log(featuersList);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />
@@ -271,16 +275,16 @@ const Home = () => {
                     controls
                   ></video>
                 </div>
-                <div className="feature-content-wapper position-absolute bottom-0 w-100 d-flex justify-content-between pb-4 px-5">
+                {/* <div className="feature-content-wapper position-absolute bottom-0 w-100 d-flex justify-content-between pb-4 px-5">
                   <div className="feature-des-wrapper">
                     <h2 className="text-white">{featuresItem?.[0]?.title}</h2>
                     <p className="text-white">{featuresItem?.[0]?.sub_title}</p>
                   </div>
-                  {/* <div className="feature-play-btn-wrapper text-center">
+                  <div className="feature-play-btn-wrapper text-center">
                       <img src={playbtn_img} className="img-fluid" alt="" />
                       <p className="text-white text-center">PLAY VIDEO</p>
-                    </div> */}
-                </div>
+                    </div>
+                </div> */}
               </div>
             </Col>
           </Row>
@@ -320,11 +324,11 @@ const Home = () => {
             <Col lg={6}>
               <div className="faq-heading-wrapper text-center">
                 <h2>FREQUENTLY ASKED QUESTIONS</h2>
-                <p>
+                {/* <p>
                   Lorem ipsum dolor sit amet consectetur. Elementum suspendisse
                   arcu sed aliquam ut nibh suspendisse posuere. Volutpat in
                   fusce nisi ipsum nec vehicula. Mattis null
-                </p>
+                </p> */}
               </div>
             </Col>
           </Row>

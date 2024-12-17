@@ -31,9 +31,9 @@ const SiteSettingServices = createApi({
       },
     }),
     pages: builder.query({
-      query: (name) => {
+      query: () => {
         return {
-          url: `${PAGES}${name ? "/" + name : ""}`,
+          url: `${PAGES}`,
           method: "GET",
         };
       },
