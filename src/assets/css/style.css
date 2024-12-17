@@ -207,6 +207,7 @@ footer.footer
   color: #fff;
   margin-top: 10px;
 }
+
 @media (max-width: 1370px) {
   .footer-menu-wrapper ul li:not(:last-child) {
     padding-right: 8px;
@@ -216,6 +217,21 @@ footer.footer
   }
   footer.footer .footer-link-copyright-wrapper .footer-end-links-wrapper a {
     font-size: 14px;
+  }
+  .footer-content-wrapper h2 {
+    font-size: 27px;
+  }
+  .contact-form-wrapper input.form-control {
+    height: 37px;
+  }
+  footer.footer .footer-link-copyright-wrapper .footer-end-links-wrapper a {
+    font-size: 13px;
+  }
+  .footer-menu-wrapper ul li a {
+    font-size: 13px;
+  }
+  footer.footer {
+    padding-top: 65px;
   }
 }
 

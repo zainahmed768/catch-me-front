@@ -95,9 +95,12 @@ const Home = () => {
                   <h2 className="text wow animate__animated animate__fadeInDown">
                     {homeContent?.section2_title}
                   </h2>
-                  <p className="wow animate__animated animate__fadeInLeft">
-                    {homeContent?.section2_sub_title}
-                  </p>
+                  <p
+                    className="wow animate__animated animate__fadeInLeft"
+                    dangerouslySetInnerHTML={{
+                      __html: homeContent?.section2_sub_title,
+                    }}
+                  ></p>
                 </div>
               </div>
             </Col>
@@ -260,14 +263,18 @@ const Home = () => {
               <div className="feature-video-wrapper position-relative">
                 <div className="feature-video-img-wrapper">
                   {/* <img src={feature4_img} className="img-fluid" /> */}
-                  <video src={featuresItem?.[0]?.image} width={"100%"} controls></video>
+                  <video
+                    src={featuresItem?.[0]?.image}
+                    width={"100%"}
+                    controls
+                  ></video>
                 </div>
                 <div className="feature-content-wapper position-absolute bottom-0 w-100 d-flex justify-content-between pb-4 px-5">
                   <div className="feature-des-wrapper">
                     <h2 className="text-white">{featuresItem?.[0]?.title}</h2>
                     <p className="text-white">{featuresItem?.[0]?.sub_title}</p>
                   </div>
-                    {/* <div className="feature-play-btn-wrapper text-center">
+                  {/* <div className="feature-play-btn-wrapper text-center">
                       <img src={playbtn_img} className="img-fluid" alt="" />
                       <p className="text-white text-center">PLAY VIDEO</p>
                     </div> */}
@@ -295,9 +302,7 @@ const Home = () => {
               <div className="feature-blue-wrapper mt-5 bg-info d-flex  align-items-center px-lg-5">
                 <div className="feature-brown-content-wrapper text-center pt-5">
                   <h2 className="text-white">{featuresItem?.[2]?.title}</h2>
-                  <p className="text-white">
-                  {featuresItem?.[2]?.sub_title}
-                  </p>
+                  <p className="text-white">{featuresItem?.[2]?.sub_title}</p>
                 </div>
               </div>
             </Col>
@@ -329,7 +334,11 @@ const Home = () => {
                   return (
                     <Accordion.Item eventKey={index}>
                       <Accordion.Header>{faq?.question}</Accordion.Header>
-                      <Accordion.Body>{faq?.answer}</Accordion.Body>
+                      <Accordion.Body>
+                        <p
+                          dangerouslySetInnerHTML={{ __html: faq?.answer }}
+                        ></p>
+                      </Accordion.Body>
                     </Accordion.Item>
                   );
                 })}
