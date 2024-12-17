@@ -176,26 +176,28 @@ const Home = () => {
           <Row>
             <Col lg={6}>
               <div className="trusted-wrap">
-                <h2>Trusted by over multiple users</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Elementum suspendisse
-                  arcu sed aliquam ut nibh suspendisse posuere. V
-                </p>
+                {/* <h2>Trusted by over multiple users</h2> */}
+                <h4>
+                  App informed by years of experience with Juvenile Justice,
+                  Psychiatric Hospitals, Group Homes, Foster Care, Schools, and
+                  Clinics.
+                </h4>
+                <p></p>
               </div>
             </Col>
             <Col lg={6}>
               <div className="stats-row-wrapper d-flex align-items-center gap-3">
                 <div className="stats-wrapper">
                   <h2>100k</h2>
-                  <p>entum suspendisse</p>
+                  <p>Over 2000 Clients in Private Practice</p>
                 </div>
                 <div className="stats-wrapper">
                   <h2>99%</h2>
-                  <p>entum suspendisse</p>
+                  <p>Consultation with 100’s of Mental Health Professionals</p>
                 </div>
                 <div className="stats-wrapper">
                   <h2>100k</h2>
-                  <p>entum suspendisse</p>
+                  <p>Around 100 people interested in using Catch-Me</p>
                 </div>
               </div>
             </Col>
