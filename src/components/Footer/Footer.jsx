@@ -71,7 +71,7 @@ const Footer = () => {
 	return (
 		<>
 			<ToastContainer />
-			<footer className="footer bg-info">
+			<footer className="footer bg-info" id="footer">
 				<Container>
 					<Row>
 						<Col lg={8}>
@@ -102,7 +102,7 @@ const Footer = () => {
 								<Col lg="7">
 									<div className="footer-info-wrapper d-flex gap-3">
 										<a
-											href={"https://www.facebook.com"}
+											href={"https://www.facebook.com/Catch.me.coach/"}
 											className=""
 											target="_blank"
 										>
@@ -114,7 +114,12 @@ const Footer = () => {
 												height={30}
 											/>
 										</a>
-										<a href={"https://www.linkedin.com"} target="_blank">
+										<a
+											href={
+												"https://www.linkedin.com/in/debra-shawver-licsw-72a496b0/"
+											}
+											target="_blank"
+										>
 											<img
 												src={linkedin}
 												className="img-fluid"
@@ -124,7 +129,7 @@ const Footer = () => {
 											/>
 										</a>
 										<a
-											href={"https://www.instagram.com"}
+											href={"https://www.instagram.com/catch.me.coach/"}
 											className=""
 											target="_blank"
 										>

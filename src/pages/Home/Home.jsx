@@ -340,7 +340,7 @@ const Home = () => {
 			</section>
 			{/* features ends here */}
 			{/* FAQ starts here */}
-			<section className="faq-sec bg-primary">
+			<section className="faq-sec bg-primary" id="link">
 				<Container>
 					<Row>
 						<Col lg={3}></Col>
