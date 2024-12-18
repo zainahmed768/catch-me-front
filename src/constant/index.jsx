@@ -11,19 +11,26 @@ import feature4_img from "../assets/img/feature4.png";
 import feature5_img from "../assets/img/feature5.png";
 import playbtn_img from "../assets/img/play-btn.png";
 import footer_logo from "../assets/img/footer-logo.png";
-
+import footerFb from "../assets/img/footer-fb.png";
+import footerIn from "../assets/img/footer-in.png";
+import footeryoutube from "../assets/img/footer-youtube.png";
+import linkedin from "../assets/img/linkedin.png";
 export {
-  logo,
-  apple_pay,
-  google_pay,
-  banner_img,
-  about_img,
-  photo_img,
-  feature1_img,
-  feature2_img,
-  feature3_img,
-  feature4_img,
-  feature5_img,
-  playbtn_img,
-  footer_logo,
+	linkedin,
+	footerFb,
+	footerIn,
+	footeryoutube,
+	logo,
+	apple_pay,
+	google_pay,
+	banner_img,
+	about_img,
+	photo_img,
+	feature1_img,
+	feature2_img,
+	feature3_img,
+	feature4_img,
+	feature5_img,
+	playbtn_img,
+	footer_logo,
 };
