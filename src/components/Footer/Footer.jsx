@@ -11,7 +11,10 @@ import {
 	footerFb,
 	linkedin,
 } from "../../constant";
-import { useContactQueryMutation } from "../../redux/services/SiteSettingServices";
+import {
+	useContactQueryMutation,
+	useLandingPageContentQuery,
+} from "../../redux/services/SiteSettingServices";
 import { contactFormValidation } from "../../utils/HelperFunction";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,6 +22,8 @@ import { PulseLoader } from "react-spinners";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+	const { data } = useLandingPageContentQuery();
+	let homeContent = data?.response?.data;
 	const [query, setQuery] = useState({
 		name: "",
 		email: "",
@@ -89,12 +94,12 @@ const Footer = () => {
 										</p>
 									</div>
 									<div className="play-icons-wrapper d-flex justify-content-lg-start justify-content-center gap-2 pt-2">
-										<Link>
+										<a href={homeContent?.apple_link}>
 											<img src={apple_pay} className="img-fluid" alt="" />
-										</Link>
-										<Link>
+										</a>
+										<a href={homeContent?.google_link}>
 											<img src={google_pay} className="img-fluid" alt="" />
-										</Link>
+										</a>
 									</div>
 								</Col>
 							</Row>
